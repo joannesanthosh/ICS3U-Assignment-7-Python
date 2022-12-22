@@ -1,31 +1,37 @@
 #!/usr/bin/env python3
 
-# Created by: Joanne Santhosh
+# Created by Joanne Santhosh
 # Created on: Dec 2022
-# This program uses a list
+# This program finds the even numbers in a list
+
+
+def even_numbers(list_U):
+    list2 = []
+    loop_counter = 0
+
+    for single_element in list_U:
+        if loop_counter % 2 == 0:
+            list2.append(single_element)
+        loop_counter += 1
+
+    return list2
 
 
 def main():
-    # this function uses a list
+   # This function takes the input and produces a list
 
-    words = []
-    temp_word = None
+    list_U = []
 
     # input
-    print("Enter 1 word at a time. Enter STOP to end.")
+    for loop_counter in range(0, 10):
+        single_random_number = random.randint(0, 100)
+        random_numbers.append(single_random_number)
 
-    temp_word = input("Enter a word: ")
-    words.append(temp_word)
-    while temp_word.upper() != "STOP":
-        temp_word = input("Enter a word: ")
-        words.append(temp_word)
+    list2 = odd_indices(list_U)
 
-    words.pop() # remove the "Stop" that was added
     print("")
-
-    print("Here are the words.")
-    for counter in range(0, len(words)):
-        print(temp_word)
+    print(list_U)
+    print("The elements in odd positions in the list are: {0}".format(list2))
 
 
 if __name__ == "__main__":
