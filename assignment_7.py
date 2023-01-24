@@ -1,43 +1,40 @@
 #!/usr/bin/env python3
 
-# Created by Joanne Santhosh
-# Created on: Dec 2022
-# This program finds the even numbers in a list
-
+# Created by: Joanne Santhosh
+# Created on: Jan 2023
+# This program identifies how many even numbers there are
 
 import random
 
 
-def find_even_numbers(list_of_numbers):
+def find_even_number(list_of_numbers):
     even_number = list_of_numbers[0]
 
     for counter in range(0, len(list_of_numbers)):
         if list_of_numbers[counter] % 2 == 0:
-            even_number = list_of_numbers[counter]
+            even_number += 1
 
     return even_number
 
 
 def main():
-    # this function uses an array
+    # this function generates 10 random numbers
 
-    my_numbers = []
-
-    # input
-    for loop_counter in range(0, 100):
-        random_number = random.randint(1, 50)
-        my_numbers.append(random_number)
-    print("")
-
-    print("Here are 100 random numbers:")
+    random_numbers = []
 
     for loop_counter in range(0, 100):
-        print("The random number is: {0}".format(my_numbers[loop_counter]))
+        single_random_number = random.randint(1, 50)
+        random_numbers.append(single_random_number)
+        print(
+            "The random number {0} is: {1}".format(
+                loop_counter + 1, random_numbers[loop_counter]
+            )
+        )
 
-# calls function
-    even_number = find_even_numbers(random_number)
+    # calls function
+    even_number = find_even_number(random_numbers)
     print("")
-    print("The even numbers are {0}".format(even_number))
+    print("There are {0} even numbers in this list".format(even_number))
 
     print("\nDone.")
 
